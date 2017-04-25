@@ -1,0 +1,37 @@
+h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+#ttt1 table {
+    margin: 0 auto 0 auto;
+}
+
+#ttt1 table td {
+    width: 100px;
+    height: 100px;
+}
+
+#ttt1 table tr:nth-child(1) td:nth-child(2) {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+#ttt1 table tr:nth-child(2) td:nth-child(1) {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+#ttt1 table tr:nth-child(2) td:nth-child(2) {
+    border: 1px solid gray;
+}
+
+#ttt1 table tr:nth-child(2) td:nth-child(3) {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+#ttt1 table tr:nth-child(3) td:nth-child(2) {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
