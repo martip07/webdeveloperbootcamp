@@ -1,2 +1,2 @@
-/terraform/aws.tf
 /terraform/.terraform
+/terraform/terraform.tfvars
