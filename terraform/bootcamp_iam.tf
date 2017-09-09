@@ -17,3 +17,40 @@ resource "aws_iam_policy_attachment" "bootcamp_cdb_plcy_attach" {
         "${aws_iam_role.bootcamp_cdb_role.id}"
     ]
 }
+
+resource "aws_iam_role" "bootcamp_cpp_role" {
+    name = "${var.iam_role_name_cpp_bootcamp}"
+    assume_role_policy = "${var.iam_role_policy_cpp_bootcamp}"
+}
+
+resource "aws_iam_role_policy" "bootcamp_cpp_policy" {
+    name = "${var.iam_policy_name_cpp_bootcamp}"
+    role = "${aws_iam_role.bootcamp_cpp_role.id}"
+    policy =    <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect":"Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion",
+        "s3:GetBucketVersioning"
+      ],
+      "Resource": [
+        "${aws_s3_bucket.bootcamp_cpp_artifact.arn}",
+        "${aws_s3_bucket.bootcamp_cpp_artifact.arn}/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "codebuild:BatchGetBuilds",
+        "codebuild:StartBuild"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+EOF
+}
