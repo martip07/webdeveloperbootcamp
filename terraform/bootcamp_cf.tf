@@ -1,7 +1,17 @@
 resource "aws_cloudfront_distribution" "bootcamp_cf" {
     origin {
-        domain_name = "${aws_s3_bucket.bootcamp_s3.bucket_domain_name}"
+        domain_name = "${aws_s3_bucket.bootcamp_s3.website_endpoint}"
         origin_id = "bootcamps3bucket"
+        custom_origin_config {
+            http_port = "80"
+            https_port = "443"
+            origin_protocol_policy = "match-viewer"
+            origin_ssl_protocols = [
+                "TLSv1",
+                "TLSv1.1",
+                "TLSv1.2"
+            ]
+        }
     }
 
     enabled = true
