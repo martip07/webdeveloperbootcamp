@@ -5,7 +5,9 @@ resource "aws_codebuild_project" "bootcamp_cbd" {
     service_role = "${aws_iam_role.bootcamp_cdb_role.arn}"
 
     artifacts {
-        type = "NO_ARTIFACTS"
+        type = "S3"
+        location = "${aws_s3_bucket.bootcamp_cdb_artifact.bucket}"
+        namespace_type = "BUILD_ID"
     }
 
     environment {

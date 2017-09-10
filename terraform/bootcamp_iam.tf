@@ -33,9 +33,12 @@ resource "aws_iam_role_policy" "bootcamp_cpp_policy" {
     {
       "Effect":"Allow",
       "Action": [
+        "s3:ListAllMyBuckets",
+        "s3:ListBucket",
         "s3:GetObject",
         "s3:GetObjectVersion",
-        "s3:GetBucketVersioning"
+        "s3:GetBucketVersioning",
+        "s3:PutObject"
       ],
       "Resource": [
         "${aws_s3_bucket.bootcamp_cpp_artifact.arn}",

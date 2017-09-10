@@ -3,6 +3,6 @@ version: 0.2
 phases:
   build:
     commands:
-      - aws s3 sync . s3://bootcamp.dojogeek.net/ --exclude "buildspec.yml" --exclude ".git/*" --acl "public-read" --region us-west-2
+      - aws s3 sync . s3://bootcamp.dojogeek.net/ --exclude "buildspec.yml" --exclude ".gitignore" --exclude ".git/*" --exclude "terraform/*" --acl "public-read" --region us-west-2
 
 
