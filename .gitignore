@@ -2,3 +2,4 @@
 /terraform/vars.tf
 /terraform/terraform.tfstate
 /terraform/terraform.tfstate.backup
+/YelpCamp/node_modules
