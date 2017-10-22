@@ -1,36 +1,47 @@
 <% include partials/header %>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+        YelpCamp
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 <div class="container">
-    <header class="hero is-primary">
+    <header class="jumbotron">
         <div class="hero-body">
             <h1 class="title">This is the campgrounds page</h1>
                 
-            <a class="button is-info" href="/campgrounds/new">Add new Campground</a>
+            <a class="btn btn-primary" href="/campgrounds/new">Add new Campground</a>
         </div>
     </header>
     
-    <section class="section">
-            <div class="columns is-desktop">
-                    <% campgrounds.forEach(function(campground){%>
-                        <div class="column">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-2by1">
-                                            <img src="<%= campground.image %>" alt="<%= campground.name %>">
-                                    </figure>
-                                        
-                                </div>
-                                <div class="card-content">
-                                        <h4 class="has-text-centered"><%= campground.name %></h4>
-                                </div>
-                            </div>
-                        </div>
-                    <%}); %>
+    <div class="row">
+        <% campgrounds.forEach(function(campground){%>
+            <div class="col-12 col-sm-3 mt-2">
+                <div class="card">
+                    <img class="card-img-top img-fluid img-thumbnail" src="<%= campground.image %>" alt="<%= campground.name %>">
+                    <div class="card-body">
+                        <h4 class="card-title text-center"><%= campground.name %></h4>
+                    </div>
+                </div>
+            </div>
+        <%}); %>
     </div>
-    </section>
 
-    
+
+
     <a href="/">Go home</a>
+
 </div>
 
 <% include partials/footer %>

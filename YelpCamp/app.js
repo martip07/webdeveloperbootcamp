@@ -8,6 +8,10 @@ app.set('view engine', 'ejs');
 let campgrounds = [
     {name: 'Arequia - Peru', image: 'https://media.holidayme.com/images/Arequipa-Peru/Arequipa-635637324544067260.jpg'},
     {name: 'Lima - Peru', image: 'https://www.airpano.com/files/Lima-Peru/images/image5.jpg'},
+    {name: 'Arequia - Peru', image: 'https://media.holidayme.com/images/Arequipa-Peru/Arequipa-635637324544067260.jpg'},
+    {name: 'Lima - Peru', image: 'https://www.airpano.com/files/Lima-Peru/images/image5.jpg'},
+    {name: 'Arequia - Peru', image: 'https://media.holidayme.com/images/Arequipa-Peru/Arequipa-635637324544067260.jpg'},
+    {name: 'Lima - Peru', image: 'https://www.airpano.com/files/Lima-Peru/images/image5.jpg'},
     {name: 'Huancayo - Peru', image: 'http://media1.trover.com/T/5346aae6d6bdd436d3001444/fixedw_large_4x.jpg'}
 ]
 
