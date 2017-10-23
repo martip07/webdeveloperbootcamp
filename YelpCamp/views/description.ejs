@@ -1,0 +1,35 @@
+<% include partials/header %>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+        YelpCamp
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-12 col-sm-3 mt-2">
+            <h3><%= campground.name %></h3>
+            <img src="<%= campground.image %>" alt="<%= campground.name %>">
+            <p><%= campground.description %></p>
+        </div>
+    </div>
+
+
+
+    <a href="/">Go home</a>
+
+</div>
+
+<% include partials/footer %>
